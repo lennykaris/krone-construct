@@ -6,8 +6,6 @@ export default function CTABand() {
     <section className="bg-krone-amber text-krone-black py-16 md:py-24 select-none">
       <div className="max-w-7xl mx-auto px-6 md:px-24">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
-          
-          {/* Left Column: Big Headline */}
           <div>
             <h2 className="font-display font-black text-5xl md:text-[72px] leading-[0.9] uppercase tracking-tight">
               START YOUR
@@ -16,7 +14,6 @@ export default function CTABand() {
             </h2>
           </div>
 
-          {/* Right Column: CTA Button and Subtext */}
           <div className="flex flex-col items-start md:items-end md:text-right">
             <motion.a
               href="#contact"
@@ -30,7 +27,6 @@ export default function CTABand() {
               Free consultation · No commitment
             </p>
           </div>
-          
         </div>
       </div>
     </section>

@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 export default function Hero() {
   return (
     <section className="relative h-screen w-full overflow-hidden bg-krone-black flex items-center">
-      {/* Background Image with Dark Mask */}
       <div className="absolute inset-0 z-0">
         <img
           src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1800&q=80"
@@ -12,16 +11,12 @@ export default function Hero() {
           className="w-full h-full object-cover object-center filter grayscale contrast-125 opacity-40"
           loading="eager"
         />
-        {/* Editorial-grade linear gradient mask */}
         <div className="absolute inset-0 bg-gradient-to-t from-krone-black via-transparent to-krone-black/70" />
       </div>
 
-      {/* Amber Vertical Rule - absolute left-16, top-0, h-full, w-[2px], bg-krone-amber, opacity-40 */}
       <div className="hidden md:block absolute left-16 top-0 h-full w-[2px] bg-krone-amber opacity-40 z-10" />
 
-      {/* Content Container */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-24 pt-20 flex flex-col justify-center h-full">
-        {/* Eyebrow */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
@@ -33,7 +28,6 @@ export default function Hero() {
           <span>NAIROBI, KENYA</span>
         </motion.div>
 
-        {/* Main Headline */}
         <motion.h1
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
@@ -45,7 +39,6 @@ export default function Hero() {
           {"\n"}CALL IMPOSSIBLE
         </motion.h1>
 
-        {/* Thin amber rule (80px wide, 1px) then body copy */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -58,7 +51,6 @@ export default function Hero() {
           </p>
         </motion.div>
 
-        {/* CTAs */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -80,7 +72,6 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Scroll indicator: bottom-center, thin amber line that animates downward infinitely */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center z-10 select-none">
         <span className="font-body text-[9px] text-krone-amber uppercase tracking-[0.25em] mb-2 font-medium opacity-80">
           Scroll

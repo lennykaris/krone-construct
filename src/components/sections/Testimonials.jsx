@@ -6,7 +6,6 @@ export default function Testimonials() {
   const [activeIndex, setActiveIndex] = useState(0);
   const containerRef = useRef(null);
 
-  // Apply reveal to the testimonials container
   useScrollReveal(containerRef);
 
   const testimonials = [
@@ -44,13 +43,10 @@ export default function Testimonials() {
       className="py-24 md:py-32 bg-krone-charcoal border-b border-krone-amber/10 relative overflow-hidden select-none"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-24 relative z-10 flex flex-col items-center">
-        
-        {/* Large typographic quote background mark */}
         <div className="absolute top-12 left-6 md:left-24 font-display text-[180px] md:text-[240px] text-krone-amber opacity-10 select-none pointer-events-none leading-none font-black">
           “
         </div>
 
-        {/* Testimonials Carousel Content wrapper */}
         <div className="w-full max-w-4xl min-h-[220px] flex flex-col justify-center items-center text-center mt-12 md:mt-16">
           <AnimatePresence mode="wait">
             <motion.div
@@ -61,12 +57,10 @@ export default function Testimonials() {
               transition={{ duration: 0.4, ease: 'easeInOut' }}
               className="flex flex-col items-center"
             >
-              {/* Quote Text */}
               <p className="font-body text-lg md:text-2xl italic text-krone-white max-w-[90%] md:max-w-[80%] leading-relaxed">
                 "{testimonials[activeIndex].quote}"
               </p>
 
-              {/* Author & Company */}
               <div className="mt-8 flex flex-col items-center">
                 <span className="font-body text-xs md:text-sm font-semibold uppercase tracking-[0.2em] text-krone-amber">
                   {testimonials[activeIndex].author}
@@ -79,9 +73,7 @@ export default function Testimonials() {
           </AnimatePresence>
         </div>
 
-        {/* Carousel Navigation controls */}
         <div className="flex items-center gap-12 mt-12">
-          {/* Prev button */}
           <button
             onClick={handlePrev}
             className="text-krone-concrete hover:text-krone-amber transition-colors duration-300 focus:outline-none p-2 group"
@@ -103,7 +95,6 @@ export default function Testimonials() {
             </svg>
           </button>
 
-          {/* Indicators */}
           <div className="flex items-center gap-2">
             {testimonials.map((_, index) => (
               <button
@@ -117,7 +108,6 @@ export default function Testimonials() {
             ))}
           </div>
 
-          {/* Next button */}
           <button
             onClick={handleNext}
             className="text-krone-concrete hover:text-krone-amber transition-colors duration-300 focus:outline-none p-2 group"

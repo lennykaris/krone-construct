@@ -5,9 +5,7 @@ export default function Marquee() {
 
   return (
     <section className="w-full bg-krone-charcoal py-4 border-y border-krone-amber/10 overflow-hidden select-none relative z-10">
-      {/* Wrapper to handle layout and animation pause on hover */}
       <div className="flex w-max group">
-        {/* First track */}
         <div className="animate-marquee-right group-hover:[animation-play-state:paused] flex items-center font-body font-medium text-[13px] uppercase tracking-[0.2em] text-krone-concrete">
           {Array(4).fill(marqueeText).map((text, idx) => (
             <span key={idx} className="flex items-center shrink-0">
@@ -23,7 +21,6 @@ export default function Marquee() {
           ))}
         </div>
         
-        {/* Second track for seamless loop */}
         <div className="animate-marquee-right group-hover:[animation-play-state:paused] flex items-center font-body font-medium text-[13px] uppercase tracking-[0.2em] text-krone-concrete" aria-hidden="true">
           {Array(4).fill(marqueeText).map((text, idx) => (
             <span key={idx} className="flex items-center shrink-0">

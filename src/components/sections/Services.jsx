@@ -8,7 +8,6 @@ export default function Services() {
   const containerRef = useRef(null);
   const hrContainerRef = useRef(null);
 
-  // Scroll reveal on the service rows
   useScrollReveal(containerRef, {
     stagger: 0.08,
     selector: '.service-row-item',
@@ -87,7 +86,6 @@ export default function Services() {
   return (
     <section id="services" className="py-24 md:py-32 bg-krone-black border-b border-krone-charcoal select-none">
       <div className="max-w-7xl mx-auto px-6 md:px-24">
-        {/* Section Heading */}
         <div className="mb-16 flex flex-col items-start">
           <span className="font-body text-[11px] uppercase tracking-[0.25em] text-krone-concrete mb-2 font-semibold">
             Capabilities
@@ -98,7 +96,6 @@ export default function Services() {
           <div className="w-12 h-[2px] bg-krone-amber mt-4" />
         </div>
 
-        {/* Stacked Accordion Rows */}
         <div ref={hrContainerRef}>
           <div ref={containerRef} className="flex flex-col">
             {services.map((service, index) => {
@@ -108,22 +105,18 @@ export default function Services() {
                   key={service.num}
                   className="service-row-item flex flex-col w-full group transition-colors duration-300 hover:bg-krone-amber-dim"
                 >
-                  {/* Row Header Clickable */}
                   <div
                     onClick={() => toggleAccordion(index)}
                     className="flex justify-between items-center py-6 md:py-8 px-4 cursor-pointer"
                   >
-                    {/* Left: Number */}
                     <span className="font-body text-xs md:text-sm font-medium text-krone-amber w-12">
                       {service.num}
                     </span>
 
-                    {/* Center: Service Name */}
                     <span className="flex-1 font-display text-2xl md:text-[40px] font-black text-krone-white uppercase tracking-wide leading-none transition-colors group-hover:text-krone-white">
                       {service.name}
                     </span>
 
-                    {/* Right: Rotating Chevron */}
                     <motion.div
                       animate={{ rotate: isOpen ? 90 : 0 }}
                       transition={{ duration: 0.3, ease: 'easeOut' }}
@@ -146,7 +139,6 @@ export default function Services() {
                     </motion.div>
                   </div>
 
-                  {/* Expandable Description */}
                   <AnimatePresence initial={false}>
                     {isOpen && (
                       <motion.div
@@ -172,7 +164,6 @@ export default function Services() {
                     )}
                   </AnimatePresence>
 
-                  {/* Horizontal Rule */}
                   <div className="w-full h-[1px] bg-krone-charcoal relative">
                     <div className="services-hr absolute top-0 left-0 w-full h-full bg-krone-amber/40 origin-left" />
                   </div>

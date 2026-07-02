@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 
 export default function Nav() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('');
 
-  // Manage top bar transparency transition
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 80) {
@@ -18,7 +16,6 @@ export default function Nav() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Track active section for floating bottom navigation
   useEffect(() => {
     const sections = ['work', 'services', 'about', 'contact'];
     const observers = [];
@@ -36,7 +33,7 @@ export default function Nav() {
           });
         },
         {
-          rootMargin: '-40% 0px -50% 0px', // Detects the active center portion
+          rootMargin: '-40% 0px -50% 0px',
           threshold: 0,
         }
       );
@@ -44,7 +41,6 @@ export default function Nav() {
       observers.push({ observer, el });
     });
 
-    // Fallback for top of the page
     const handleScrollTop = () => {
       if (window.scrollY < 200) {
         setActiveSection('');
@@ -67,7 +63,6 @@ export default function Nav() {
 
   return (
     <>
-      {/* Top Header Navigation (Fixed at top) */}
       <nav
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
           isScrolled
@@ -76,7 +71,6 @@ export default function Nav() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
-          {/* Logo */}
           <a href="#" className="flex items-baseline group select-none">
             <span className="font-display text-[28px] font-black text-krone-amber tracking-tight transition-transform duration-300 group-hover:scale-105">
               KRONE
@@ -86,7 +80,6 @@ export default function Nav() {
             </span>
           </a>
 
-          {/* Desktop Nav Links (Hidden on mobile) */}
           <div className="hidden md:flex items-center space-x-10">
             {navLinks.map((link) => (
               <a
@@ -101,12 +94,10 @@ export default function Nav() {
         </div>
       </nav>
 
-      {/* Floating Bottom Navigation Bar (Mobile only, below 768px) */}
       <div className="md:hidden fixed bottom-6 left-6 right-6 z-50 bg-krone-black border border-krone-amber/40 py-2.5 px-3 rounded-[2px] flex justify-around items-center">
         {navLinks.map((link) => {
           const isActive = activeSection === link.id;
 
-          // Render icons for mobile app layout
           let icon = null;
           if (link.id === 'work') {
             icon = (

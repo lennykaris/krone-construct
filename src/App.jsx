@@ -13,17 +13,8 @@ import Footer from './components/sections/Footer';
 export default function App() {
   return (
     <div className="relative min-h-screen bg-krone-black font-body text-krone-white select-none">
-      {/* 
-        Amber grain overlay: a fixed-position element with SVG noise filter.
-        Placed here so it overlays everything, but pointer-events: none ensures
-        interactivity isn't blocked.
-      */}
       <div className="grain-overlay" aria-hidden="true" />
-
-      {/* Navigation */}
       <Nav />
-
-      {/* Main Page Layout */}
       <main className="relative z-10">
         <Hero />
         <Marquee />
@@ -34,8 +25,6 @@ export default function App() {
         <Testimonials />
         <CTABand />
       </main>
-
-      {/* Footer */}
       <Footer />
     </div>
   );

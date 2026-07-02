@@ -18,7 +18,6 @@ export default function useScrollReveal(ref, options = {}) {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     if (prefersReducedMotion) {
-      // Set to final visible state immediately and return
       if (stagger && selector) {
         const targets = element.querySelectorAll(selector);
         gsap.set(targets, { opacity: 1, y: 0 });
@@ -28,7 +27,6 @@ export default function useScrollReveal(ref, options = {}) {
       return;
     }
 
-    // Set initial hidden states
     if (stagger && selector) {
       const targets = element.querySelectorAll(selector);
       gsap.set(targets, { opacity: 0, y: 40 });

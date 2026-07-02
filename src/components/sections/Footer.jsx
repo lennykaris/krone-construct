@@ -7,10 +7,8 @@ export default function Footer() {
     <footer id="contact" className="bg-krone-black pt-20 pb-8 border-t border-krone-charcoal select-none">
       <div className="max-w-7xl mx-auto px-6 md:px-24">
         
-        {/* Top Row: 3 columns */}
         <div className="grid grid-cols-1 md:grid-cols-[40%_35%_25%] gap-12 md:gap-8 pb-16">
           
-          {/* Column 1: Brand & Tagline */}
           <div className="flex flex-col items-start">
             <div className="flex items-baseline mb-4">
               <span className="font-display text-[26px] font-black text-krone-amber tracking-tight">
@@ -25,9 +23,7 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Column 2: Navigation Links (2 columns nested) */}
           <div className="grid grid-cols-2 gap-4">
-            {/* Nav Column A */}
             <div className="flex flex-col space-y-3">
               <span className="font-body text-xs font-semibold uppercase tracking-[0.15em] text-krone-concrete/50 mb-1">
                 Explore
@@ -52,7 +48,6 @@ export default function Footer() {
               </a>
             </div>
 
-            {/* Nav Column B */}
             <div className="flex flex-col space-y-3">
               <span className="font-body text-xs font-semibold uppercase tracking-[0.15em] text-krone-concrete/50 mb-1">
                 Legal
@@ -78,7 +73,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Column 3: Contact */}
           <div className="flex flex-col space-y-4">
             <span className="font-body text-xs font-semibold uppercase tracking-[0.15em] text-krone-amber">
               GET IN TOUCH
@@ -105,19 +99,14 @@ export default function Footer() {
 
         </div>
 
-        {/* Thin horizontal rule in krone-charcoal */}
         <div className="w-full h-[1px] bg-krone-charcoal mb-8" />
 
-        {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          {/* Copyright */}
           <span className="font-body text-[11px] text-krone-concrete/60 tracking-wider">
             © {currentYear} KRONE CONSTRUCT LTD. ALL RIGHTS RESERVED.
           </span>
 
-          {/* Social Icons (LinkedIn, Instagram, Twitter) */}
           <div className="flex items-center space-x-6 text-krone-concrete">
-            {/* LinkedIn */}
             <a
               href="#"
               className="hover:text-krone-amber transition-colors duration-300"
@@ -132,7 +121,6 @@ export default function Footer() {
               </svg>
             </a>
 
-            {/* Instagram */}
             <a
               href="#"
               className="hover:text-krone-amber transition-colors duration-300"
@@ -147,7 +135,6 @@ export default function Footer() {
               </svg>
             </a>
 
-            {/* Twitter / X */}
             <a
               href="#"
               className="hover:text-krone-amber transition-colors duration-300"

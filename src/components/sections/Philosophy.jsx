@@ -4,7 +4,6 @@ import useScrollReveal from '../../hooks/useScrollReveal';
 export default function Philosophy() {
   const containerRef = useRef(null);
 
-  // Apply reveal to the left and right columns
   useScrollReveal(containerRef, {
     stagger: 0.15,
     selector: '.philosophy-reveal-item',
@@ -13,7 +12,6 @@ export default function Philosophy() {
   return (
     <section id="about" className="py-24 md:py-36 bg-krone-black border-b border-krone-charcoal select-none relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-24">
-        {/* Section Heading */}
         <div className="mb-12 flex flex-col items-start">
           <span className="font-body text-[11px] uppercase tracking-[0.25em] text-krone-concrete mb-2 font-semibold">
             Our Ethos
@@ -24,12 +22,10 @@ export default function Philosophy() {
           <div className="w-12 h-[2px] bg-krone-amber mt-3" />
         </div>
 
-        {/* 2-Column Split Layout */}
         <div
           ref={containerRef}
           className="relative grid grid-cols-1 md:grid-cols-[55%_45%] gap-12 md:gap-20 items-center"
         >
-          {/* Left Column: Texture-clipped Quote */}
           <div className="philosophy-reveal-item flex flex-col items-start pr-0 md:pr-8">
             <h3
               className="philosophy-text-clip font-display font-black leading-[0.9] text-[clamp(50px,6vw,90px)] uppercase select-none w-full"
@@ -46,10 +42,8 @@ export default function Philosophy() {
             </h3>
           </div>
 
-          {/* Amber Vertical Rule (Hidden on mobile) */}
           <div className="hidden md:block absolute left-[53%] top-0 h-full w-[1px] bg-krone-amber/35" />
 
-          {/* Right Column: Prose */}
           <div className="philosophy-reveal-item flex flex-col space-y-6 md:pl-10">
             <p className="font-body text-base md:text-lg text-krone-concrete leading-relaxed">
               We define the skyline. Our approach is elemental: harnessing raw materials with absolute precision to create permanent structures that endure. There is no compromise, only construction in its purest form.

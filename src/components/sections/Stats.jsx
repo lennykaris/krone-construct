@@ -34,7 +34,6 @@ function StatItem({ value, label, prefix = '', suffix = '', borderClass }) {
 export default function Stats() {
   const containerRef = useRef(null);
 
-  // Apply reveal to the stats container
   useScrollReveal(containerRef);
 
   return (
@@ -42,7 +41,6 @@ export default function Stats() {
       ref={containerRef}
       className="relative py-20 md:py-28 bg-krone-black border-b border-krone-charcoal overflow-hidden select-none"
     >
-      {/* Background Image with Dark Overlay */}
       <div className="absolute inset-0 z-0">
         <img
           src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1800&q=20"

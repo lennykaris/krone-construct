@@ -1,13 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
-  <!-- Minimalist, precise architectural 'K' monogram in Krone Amber -->
   <g fill="#C5893A">
-    <!-- Left Column (Pillar) -->
     <rect x="10" y="6" width="6" height="36" />
-    <!-- Upper Diagonal (Beam) -->
     <polygon points="16,24 32,6 38,6 20,24" />
-    <!-- Lower Diagonal (Strut) -->
     <polygon points="18,22 38,42 32,42 15,25" />
   </g>
-  <!-- Accent slit simulating structural expansion joint -->
   <rect x="10" y="23" width="6" height="2" fill="#0D0E11" />
 </svg>

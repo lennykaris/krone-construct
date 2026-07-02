@@ -4,7 +4,6 @@ import useScrollReveal from '../../hooks/useScrollReveal';
 export default function Projects() {
   const sectionRef = useRef(null);
 
-  // Stagger reveal on the project-grid-item elements
   useScrollReveal(sectionRef, {
     stagger: 0.08,
     selector: '.project-grid-item',
@@ -61,7 +60,6 @@ export default function Projects() {
   return (
     <section id="work" className="py-24 md:py-32 bg-krone-black border-b border-krone-charcoal select-none">
       <div className="max-w-7xl mx-auto px-6 md:px-24">
-        {/* Section Heading */}
         <div className="mb-16 flex flex-col items-start">
           <span className="font-body text-[11px] uppercase tracking-[0.25em] text-krone-concrete mb-2 font-semibold">
             Featured Projects
@@ -72,7 +70,6 @@ export default function Projects() {
           <div className="w-12 h-[2px] bg-krone-amber mt-4" />
         </div>
 
-        {/* Asymmetric Grid */}
         <div
           ref={sectionRef}
           className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8"
@@ -82,7 +79,6 @@ export default function Projects() {
               key={project.id}
               className={`project-grid-item group overflow-hidden relative cursor-pointer bg-krone-charcoal ${project.gridClass}`}
             >
-              {/* Image */}
               <img
                 src={project.imageUrl}
                 alt={`${project.name} project in ${project.location}`}
@@ -92,10 +88,8 @@ export default function Projects() {
                 height={project.gridClass.includes('row-span-2') ? 624 : 300}
               />
 
-              {/* Cover Gradient Layer */}
               <div className="absolute inset-0 bg-gradient-to-t from-krone-black/60 to-transparent pointer-events-none group-hover:opacity-0 transition-opacity duration-300" />
               
-              {/* Label Visible on Image (before hover) */}
               <div className="absolute bottom-6 left-6 z-10 pointer-events-none group-hover:opacity-0 transition-opacity duration-300">
                 <span className="font-body text-[11px] text-krone-amber uppercase tracking-wider block mb-1">
                   {project.type}
@@ -105,21 +99,17 @@ export default function Projects() {
                 </span>
               </div>
 
-              {/* Overlay Slides Up from bottom */}
               <div className="absolute inset-0 bg-krone-black/95 p-8 flex flex-col justify-between transform translate-y-full group-hover:translate-y-0 transition-transform duration-[400ms] ease-out z-20">
-                {/* Top-right: Project number */}
                 <span className="absolute top-8 right-8 font-body text-sm font-semibold text-krone-amber select-none">
                   {project.id}
                 </span>
 
-                {/* Top Content */}
                 <div className="pt-2">
                   <span className="font-body text-xs uppercase tracking-[0.2em] text-krone-amber/70 block mb-2 font-medium">
                     {project.type}
                   </span>
                 </div>
 
-                {/* Bottom Content */}
                 <div>
                   <h3 className="font-display text-[32px] md:text-[38px] font-black text-krone-white leading-none uppercase tracking-wide">
                     {project.name}
